@@ -1,5 +1,5 @@
 {
-  "name": "vue-simple-swiper",
+  "name": "vue-zane-swiper",
   "description": "vue轮播图组件",
   "version": "0.1.1",
   "private": false,
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/qinglong-kooboo/vue-simple-swiper.git"
+    "url": "git+https://github.com/qinglong-kooboo/vue-zane-swiper.git"
   },
   "dependencies": {
     "vue": "^2.6.6",
