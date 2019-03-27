@@ -1,5 +1,6 @@
 module.exports = {
-
+  entry: './src/lib/index.js',
+  
   outputDir: 'dist/vue-slider.js',
 
   assetsDir: 'static',

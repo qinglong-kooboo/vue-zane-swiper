@@ -1,4 +1,6 @@
-import Swiper from './VueComment.vue'
+import Swiper from './swiper.vue'
+import './assets/iconfont.css'
+
 const swiper = {
   install: function(Vue) {
     Vue.component(Swiper.name, Swiper)
