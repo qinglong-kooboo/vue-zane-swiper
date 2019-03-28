@@ -16,11 +16,13 @@ npm run lib
 ```
 
 ## 参数配置
-**data**：传入一个数组，包含一个或多个对象，每个对象包含图片地址和链接跳转地址，必选<br>
+**pics**：传入一个数组，包含一个或多个对象，每个对象包含图片地址和链接跳转地址，必选<br>
 **interval**：轮播动画时间，可选（默认3000ms）<br>
 **width**：轮播图宽度，可选（默认800px）<br>
 **height**：轮播图高度，可选（默认400px）<br>
-**name**：轮播图切换动画模式，有左右滑动（move）和淡入淡出（fade）两种动画切换模式，可选（默认move）<br>
+**mode**：轮播图切换动画模式，有左右滚动（row）上下滚动（col）和淡入淡出（fade）三种动画切换模式，可选（默认row）<br>
+**isShowDots**：控制是否显示圆点（默认为false） <br>
+**isShowArrows**：控制是否显示箭头（默认为false） <br>
 
 ## 实例
 首先在项目的入口文件（main.js）中引入
@@ -46,7 +48,9 @@ sliders: {
         interval: 3000, //轮播动画时间，可选（默认3000ms）
         width:"1200px",//图片宽度，可选（默认800px）
         height:"600px",//图片高度，可选（默认400px）
-        name: 'fade' //轮播图动画方式，可选（默认move）
+        mode: 'col' //轮播图动画方式，可选（默认row） 
+        isShowDots: true //是否显示圆点，可选（默认false）  
+        isShowArrows: true //是否显示箭头，可选（默认false）    
       } 
       P.S. 插件的样式需要手动添加，可以在组件内引入：import 'vue-zane-swiper/lib/swiper.css' 或者在main.js中全局引入
 ```  
