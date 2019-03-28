@@ -1,7 +1,7 @@
 <template>
   <div class="slider" :style="style">
     <ul class="slider-wrapper" >
-      <transition-group name="move">
+      <transition-group :name="mode">
         <li v-for="pic in sliders.pics" :key="pic.index" class="slider-item" v-show="pic.index === nowIndex">
           <a :href="pic.url || ''">
             <img :src="pic.src">
@@ -9,13 +9,13 @@
         </li>
       </transition-group>
     </ul>
-    <div class="dots" >
+    <div class="dots" v-if="this.sliders.isShowDots">
       <span class="dot" v-for="(item, index) in dots" :key="index" :class="{active: nowIndex === index }" @click="goto(index)"></span>
     </div>
-    <div class="arrow-left-wrapper" @click="goByArrow(prevIndex)">
+    <div class="arrow-left-wrapper" @click="goByArrow(prevIndex)" v-if="this.sliders.isShowArrows">
       <span class="iconfont arrow-left">&#xe504;</span>
     </div>
-    <div class="arrow-right-wrapper" @click="goByArrow(nextIndex)">
+    <div class="arrow-right-wrapper" @click="goByArrow(nextIndex)" v-if="this.sliders.isShowArrows">
       <span class="iconfont arrow-right">&#xe603;</span>
     </div>
   </div>
@@ -37,7 +37,7 @@ export default {
       inv: '',
       dots: this.sliders.pics.length,
       nowIndex: 0,
-      mode: this.sliders.name || 'move',
+      mode: this.sliders.mode || 'row',
       style: 'width:'+(this.sliders.width || '800px')+';height:'+(this.sliders.height || '400px')
     }
   },
@@ -103,19 +103,33 @@ export default {
           width: 100%;
           height: 100%;
         }
-        &.move-enter-active {
+        &.row-enter-active {
           transition: all 0.5s ease;
           transform: translateX(0);
         }
-        &.move-leave-active {
+        &.row-leave-active {
           transition: all 0.5s ease;
           transform: translateX(-100%);
         }
-        &.move-enter {
+        &.row-enter {
           transform: translateX(100%);
         }
-        &.move-leave {
+        &.row-leave {
           transform: translateX(0);
+        }
+        &.col-enter-active {
+          transition: all 0.5s ease;
+          transform: translateY(0);
+        }
+        &.col-leave-active {
+          transition: all 0.5s ease;
+          transform: translateY(-100%);
+        }
+        &.col-enter {
+          transform: translateY(100%);
+        }
+        &.col-leave {
+          transform: translateY(100%);
         }
         &.fade-enter-active, .fade-leave-active {
           transition: opacity 1s;

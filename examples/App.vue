@@ -26,9 +26,10 @@ export default {
         ],
         interval: 3500,
         width: "595px",
-        height: "210px"
-        // width: '800px',
-        // height: '400px'
+        height: "210px",
+        mode: 'col',
+        isShowDots: true,
+        isShowArrows: true
       }
     }
   }
