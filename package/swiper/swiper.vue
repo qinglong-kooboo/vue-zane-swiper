@@ -3,9 +3,9 @@
     <ul class="slider-wrapper">
       <transition-group :name="mode">
         <li v-for="slider in sliders.sliders" :key="slider.index" class="slider-item" v-show="slider.index === nowIndex">
-          <a :href="slider.url || ''">
-            <span class="slider-text" v-if="sliders.isTextSlider">{{ slider.text }}</span>
-            <img :src="slider.src" v-else>
+          <span class="slider-text"  v-if="sliders.isTextSlider">{{ slider.text }}</span>
+          <a :href="slider.url || ''"  v-else>
+            <img :src="slider.src">
           </a>
         </li>
       </transition-group>
@@ -101,8 +101,9 @@ export default {
         height: 100%;
         overflow: hidden;
         display: flex;
-        justify-content: center;
+        // justify-content: center;
         align-items: center;
+        user-select: none;
         a {
           text-decoration: none;
         }
