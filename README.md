@@ -57,9 +57,6 @@ sliders: {
       P.S. 插件的样式需要手动添加，可以在组件内引入：import 'vue-zane-swiper/lib/swiper.css' 或者在main.js中全局引入
 ```  
 
-``` 
-![md.png](https://i.loli.net/2019/03/28/5c9cc35e936e1.png)
-``` 
 
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
