@@ -23,15 +23,13 @@ npm run lib
 **mode**：轮播图切换动画模式，有左右滚动（row）上下滚动（col）和淡入淡出（fade）三种动画切换模式，可选（默认row）<br>
 **isShowDots**：控制是否显示圆点（默认为false） <br>
 **isShowArrows**：控制是否显示箭头（默认为false） <br>
-**isPic**：控制slider类型,除了图片还支持轮播文字形式（默认为true） <br>
+**isTextSlider**：控制slider类型,除了图片还支持轮播文字形式（默认为false） <br>
 
 ## 实例
 首先在项目的入口文件（main.js）中引入
 ``` 
 import Slider from 'vue-zane-swiper'
-Vue.use(Slider)  
-import 'vue-zane-swiper/lib/swiper.css' // 注意要手动引入样式
-
+Vue.use(Slider) 
 ```
 
 然后使用该组件
@@ -48,7 +46,7 @@ sliders: {
             url: 'https://www.shixiseng.com/mx2018' //链接跳转地址
           }
         ],//传入图片地址和链接跳转地址或文字信息，必选
-        isPic: true, //slider类型，可选（默认true）
+        isTextSlider: true, //slider类型，可选（默认false）
         interval: 3000, //轮播动画时间，可选（默认3000ms）
         width:"1200px",//图片宽度，可选（默认800px）
         height:"600px",//图片高度，可选（默认400px）
@@ -59,6 +57,9 @@ sliders: {
       P.S. 插件的样式需要手动添加，可以在组件内引入：import 'vue-zane-swiper/lib/swiper.css' 或者在main.js中全局引入
 ```  
 
+``` 
+![md.png](https://i.loli.net/2019/03/28/5c9cc35e936e1.png)
+``` 
 
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).

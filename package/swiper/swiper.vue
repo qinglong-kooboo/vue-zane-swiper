@@ -4,7 +4,7 @@
       <transition-group :name="mode">
         <li v-for="slider in sliders.sliders" :key="slider.index" class="slider-item" v-show="slider.index === nowIndex">
           <a :href="slider.url || ''">
-            <span class="slider-text" v-if="sliders.isPic">{{ slider.text }}</span>
+            <span class="slider-text" v-if="sliders.isTextSlider">{{ slider.text }}</span>
             <img :src="slider.src" v-else>
           </a>
         </li>
