@@ -48,7 +48,8 @@ sliders: {
         height:"600px",//图片高度，可选（默认400px）
         name: 'fade' //轮播图动画方式，可选（默认move）
       } 
-```
+      P.S. 插件的样式需要手动添加，可以在组件内引入：import 'vue-zane-swiper/lib/swiper.css' 或者在main.js中全局引入
+```  
 
 
 
