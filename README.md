@@ -58,7 +58,7 @@ sliders: {
 ```  
 
 ``` 
-[![md.png](https://i.loli.net/2019/03/28/5c9cc35e936e1.png)](https://i.loli.net/2019/03/28/5c9cc35e936e1.png)
+![md.png](https://i.loli.net/2019/03/28/5c9cc35e936e1.png)
 ``` 
 
 
