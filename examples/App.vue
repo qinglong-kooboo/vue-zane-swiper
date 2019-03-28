@@ -1,11 +1,10 @@
 <template>
   <div id="app">
-    <slider :swiperOptions="sliders"></slider>
+    <swiper :sliders="sliders"></swiper>
   </div>
 </template>
 
 <script>
-import Slider from "./lib/swiper";
 export default {
   name: "app",
   data() {
@@ -32,9 +31,6 @@ export default {
         // height: '400px'
       }
     }
-  },
-  components: {
-    Slider
   }
 };
 </script>

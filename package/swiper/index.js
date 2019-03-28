@@ -1,5 +1,4 @@
 import Swiper from './swiper.vue'
-import './assets/iconfont.css'
 
 const swiper = {
   install: function(Vue) {

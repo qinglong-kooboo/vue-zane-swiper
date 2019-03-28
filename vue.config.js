@@ -1,12 +1,14 @@
 module.exports = {
-  entry: './src/lib/index.js',
-  
+  // 将 examples 目录添加为新的页面
   outputDir: 'dist/vue-slider.js',
-
-  assetsDir: 'static',
-
-  filenameHashing: true,
-
-  // 第三方插件配置
-  pluginOptions: {}
-};
+  pages: {
+    index: {
+      // page 的入口
+      entry: 'examples/main.js',
+      // 模板来源
+      template: 'public/index.html',
+      // 输出文件名
+      filename: 'index.html'
+    }
+  }
+}

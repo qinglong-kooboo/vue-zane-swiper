@@ -2,7 +2,7 @@
   <div class="slider" :style="style">
     <ul class="slider-wrapper" >
       <transition-group name="move">
-        <li v-for="(item, index) in swiperOptions.pics" :key="index" class="slider-item" v-show="index === nowIndex">
+        <li v-for="(item, index) in sliders.pics" :key="index" class="slider-item" v-show="index === nowIndex">
           <a :href="item.url">
             <img :src="item.src" alt="">
           </a>
@@ -18,9 +18,12 @@
 </template>
 
 <script>
+import '../../assets/iconfont.css'
+
 export default {
+  name: 'swiper',
   props: {
-    swiperOptions: {
+    sliders: {
       type: Object,
       default: () => {}
     }
@@ -28,22 +31,22 @@ export default {
   data () {
     return {
       inv: '',
-      dots: this.swiperOptions.pics.length,
+      dots: this.sliders.pics.length,
       nowIndex: 0,
-      mode: this.swiperOptions.name || 'move',
-      style: 'width:'+(this.swiperOptions.width || '800px')+';height:'+(this.swiperOptions.height || '400px')
+      mode: this.sliders.name || 'move',
+      style: 'width:'+(this.sliders.width || '800px')+';height:'+(this.sliders.height || '400px')
     }
   },
   computed: {
     prevIndex () {
       if (this.nowIndex === 0) {
-        return this.swiperOptions.pics.length - 1
+        return this.sliders.pics.length - 1
       } else {
         return this.nowIndex - 1
       }
     },
     nextIndex () {
-      if (this.nowIndex === (this.swiperOptions.pics.length - 1)) {
+      if (this.nowIndex === (this.sliders.pics.length - 1)) {
         return 0
       } else {
         return this.nowIndex + 1
@@ -62,7 +65,7 @@ export default {
     _runInv () {
       this.inv = setInterval(() => {
         this.goto(this.nextIndex)
-      }, this.swiperOptions.interval || 3000)
+      }, this.sliders.interval || 3000)
     },
     clearInv () {
       clearInterval(this.inv)

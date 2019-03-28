@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
-import './assets/iconfont.css'
+import swiper from '../package/index'
 
+Vue.use(swiper)
 Vue.config.productionTip = false
 
 new Vue({
