@@ -79,25 +79,25 @@ export default {
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
   .slider
-    position:relative
+    position: relative
     overflow: hidden
-    margin:0
-    padding:0
+    margin: 0
+    padding: 0
     .slider-wrapper
-      width:100%
-      height:100%
-      list-style:none
+      width: 100%
+      height: 100%
+      list-style: none
       overflow: hidden
-      margin:0
-      padding:0
+      margin: 0
+      padding: 0
       .slider-item
-        position:absolute
-        width:100%
-        height:100%
+        position: absolute
+        width: 100%
+        height: 100%
         overflow: hidden
         img
-          width:100%
-          height:100%
+          width: 100%
+          height: 100%
         &.move-enter-active
           transition: all 0.5s ease
           transform: translateX(0)
