@@ -163,9 +163,10 @@ export default {
         border-radius: 50%;
         background: rgba(255,255,255,0.6);
         cursor: pointer;
+        transition: all ease-in-out .4s;
         &.active {
           width: 20px;
-          border-radius: 5px;
+          border-radius: 4px;
           background: rgba(255,255,255,0.9);
         }
       }
