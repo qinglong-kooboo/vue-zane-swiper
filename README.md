@@ -41,9 +41,9 @@ Vue.use(Slider)
 sliders: {
         sliders: [
           {
-            src: 'https://sxsimg.xiaoyuanzhao.com/D6/5A/D685908B685DA7068A50BB6A61EDB45A.png', //图片地址
+            src: 'https://i.ibb.co/QccX8Nw/pic1.png', //图片地址
             index: 0 // 根据所传图片的顺序自增，第一个为0，（为了解决同时使用transition和v-for下不能使用自带index的问题）
-            url: 'https://www.shixiseng.com/mx2018' //链接跳转地址
+            url: 'https://i.ibb.co/QccX8Nw/pic1.png' //链接跳转地址
           }
         ],//传入图片地址和链接跳转地址或文字信息，必选
         isPic: true, //slider类型，可选（默认true）
@@ -56,7 +56,9 @@ sliders: {
       } 
       P.S. 插件的样式需要手动添加，可以在组件内引入：import 'vue-zane-swiper/lib/swiper.css' 或者在main.js中全局引入
 ```  
-
+```
+效果示例： ![avatar](https://i.ibb.co/0frv8Lt/md.png)
+``` 
 
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
