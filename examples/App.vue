@@ -13,15 +13,15 @@ export default {
         pics: [
           {
             src: "https://sxsimg.xiaoyuanzhao.com/D6/5A/D685908B685DA7068A50BB6A61EDB45A.png",
-            alt: "1"
+            index: 0,
           },
           {
             src: "https://sxsimg.xiaoyuanzhao.com/27/B5/27C9EDE4770EF9F1A78A9E10D7F9D2B5.png",
-            alt: "1"
+            index: 1
           },
           {
             src: "https://sxsimg.xiaoyuanzhao.com/F4/9E/F4FBC65B27DEB9790539956CF468409E.png",
-            alt: "1"
+            index: 2
           }
         ],
         interval: 3500,

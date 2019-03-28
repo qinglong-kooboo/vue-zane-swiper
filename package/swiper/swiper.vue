@@ -2,9 +2,9 @@
   <div class="slider" :style="style">
     <ul class="slider-wrapper" >
       <transition-group name="move">
-        <li v-for="(item, index) in sliders.pics" :key="index" class="slider-item" v-show="index === nowIndex">
-          <a :href="item.url">
-            <img :src="item.src" alt="">
+        <li v-for="pic in sliders.pics" :key="pic.index" class="slider-item" v-show="pic.index === nowIndex">
+          <a :href="pic.url || ''">
+            <img :src="pic.src">
           </a>
         </li>
       </transition-group>
@@ -162,6 +162,7 @@ export default {
         height: 8px;
         border-radius: 50%;
         background: rgba(255,255,255,0.6);
+        cursor: pointer;
         &.active {
           width: 20px;
           border-radius: 5px;
