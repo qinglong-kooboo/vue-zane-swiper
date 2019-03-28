@@ -29,7 +29,9 @@ npm run lib
 首先在项目的入口文件（main.js）中引入
 ``` 
 import Slider from 'vue-zane-swiper'
-Vue.use(Slider) 
+Vue.use(Slider)  
+import 'vue-zane-swiper/lib/swiper.css' // 注意要手动引入样式
+
 ```
 
 然后使用该组件
