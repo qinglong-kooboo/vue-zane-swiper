@@ -10,7 +10,7 @@ export default {
   data() {
     return {
       sliders: {
-        pics: [
+        sliders: [
           {
             src: "https://sxsimg.xiaoyuanzhao.com/D6/5A/D685908B685DA7068A50BB6A61EDB45A.png",
             index: 0,
@@ -24,16 +24,31 @@ export default {
             index: 2
           }
         ],
+        // sliders: [
+        //   {
+        //     text: "111111111111",
+        //     index: 0,
+        //   },
+        //   {
+        //     text: "222222222222",
+        //     index: 1
+        //   },
+        //   {
+        //     text: "333333333333",
+        //     index: 2
+        //   }
+        // ],
+        // isPic: true,
+        isShowArrows: true,
+        isShowDots: true,
         interval: 3500,
         width: "595px",
         height: "210px",
-        mode: 'col',
-        isShowDots: true,
-        isShowArrows: true
+        mode: 'col'
       }
     }
   }
-};
+}
 </script>
 
 <style>

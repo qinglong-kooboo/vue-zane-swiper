@@ -1,21 +1,22 @@
 <template>
   <div class="slider" :style="style">
-    <ul class="slider-wrapper" >
+    <ul class="slider-wrapper">
       <transition-group :name="mode">
-        <li v-for="pic in sliders.pics" :key="pic.index" class="slider-item" v-show="pic.index === nowIndex">
-          <a :href="pic.url || ''">
-            <img :src="pic.src">
+        <li v-for="slider in sliders.sliders" :key="slider.index" class="slider-item" v-show="slider.index === nowIndex">
+          <a :href="slider.url || ''">
+            <span class="slider-text" v-if="sliders.isPic">{{ slider.text }}</span>
+            <img :src="slider.src" v-else>
           </a>
         </li>
       </transition-group>
     </ul>
-    <div class="dots" v-if="this.sliders.isShowDots">
+    <div class="dots" v-if="sliders.isShowDots">
       <span class="dot" v-for="(item, index) in dots" :key="index" :class="{active: nowIndex === index }" @click="goto(index)"></span>
     </div>
-    <div class="arrow-left-wrapper" @click="goByArrow(prevIndex)" v-if="this.sliders.isShowArrows">
+    <div class="arrow-left-wrapper" @click="goByArrow(prevIndex)" v-if="sliders.isShowArrows">
       <span class="iconfont arrow-left">&#xe504;</span>
     </div>
-    <div class="arrow-right-wrapper" @click="goByArrow(nextIndex)" v-if="this.sliders.isShowArrows">
+    <div class="arrow-right-wrapper" @click="goByArrow(nextIndex)" v-if="sliders.isShowArrows">
       <span class="iconfont arrow-right">&#xe603;</span>
     </div>
   </div>
@@ -35,22 +36,22 @@ export default {
   data () {
     return {
       inv: '',
-      dots: this.sliders.pics.length,
+      dots: this.sliders.sliders.length,
       nowIndex: 0,
       mode: this.sliders.mode || 'row',
-      style: 'width:'+(this.sliders.width || '800px')+';height:'+(this.sliders.height || '400px')
+      style: `width: ${this.sliders.width || '800px'} ;height: ${this.sliders.height || '400px'}`
     }
   },
   computed: {
     prevIndex () {
       if (this.nowIndex === 0) {
-        return this.sliders.pics.length - 1
+        return this.sliders.sliders.length - 1
       } else {
         return this.nowIndex - 1
       }
     },
     nextIndex () {
-      if (this.nowIndex === (this.sliders.pics.length - 1)) {
+      if (this.nowIndex === (this.sliders.sliders.length - 1)) {
         return 0
       } else {
         return this.nowIndex + 1
@@ -99,6 +100,12 @@ export default {
         width: 100%;
         height: 100%;
         overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+          text-decoration: none;
+        }
         img {
           width: 100%;
           height: 100%;
