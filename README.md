@@ -16,7 +16,7 @@ npm run lib
 ```
 
 ## 参数配置
-**pics**：传入一个数组，包含一个或多个对象，每个对象包含图片地址和链接跳转地址，必选<br>
+**sliders**：传入一个数组，包含一个或多个对象，每个对象包含图片地址和链接跳转地址，必选<br>
 **interval**：轮播动画时间，可选（默认3000ms）<br>
 **width**：轮播图宽度，可选（默认800px）<br>
 **height**：轮播图高度，可选（默认400px）<br>
@@ -38,14 +38,15 @@ Vue.use(Slider)
 
 ``` 
 sliders: {
-        pics: [
+        sliders: [
           {
             src: 'https://sxsimg.xiaoyuanzhao.com/D6/5A/D685908B685DA7068A50BB6A61EDB45A.png', //图片地址
             index: 0 // 根据所传图片的顺序自增，第一个为0，（为了解决同时使用transition和v-for下不能使用自带index的问题）
             url: 'https://www.shixiseng.com/mx2018' //链接跳转地址
           }
-        ],//传入图片地址和链接跳转地址，必选
-        interval: 3000, //轮播动画时间，可选（默认3000ms）
+        ],//传入图片地址和链接跳转地址或文字信息，必选
+        isPic: true, //slider类型，可选（默认true）
+        interval: 3000, //轮播动画时间，可选（默认3000ms）
         width:"1200px",//图片宽度，可选（默认800px）
         height:"600px",//图片高度，可选（默认400px）
         mode: 'col' //轮播图动画方式，可选（默认row） 
