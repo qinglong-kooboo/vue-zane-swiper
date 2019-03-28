@@ -23,6 +23,7 @@ npm run lib
 **mode**：轮播图切换动画模式，有左右滚动（row）上下滚动（col）和淡入淡出（fade）三种动画切换模式，可选（默认row）<br>
 **isShowDots**：控制是否显示圆点（默认为false） <br>
 **isShowArrows**：控制是否显示箭头（默认为false） <br>
+**isPic**：控制slider类型,除了图片还支持轮播文字形式（默认为true） <br>
 
 ## 实例
 首先在项目的入口文件（main.js）中引入
