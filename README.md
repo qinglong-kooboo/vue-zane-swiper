@@ -21,8 +21,8 @@ npm run lib
 **width**：轮播图宽度，可选（默认800px）<br>
 **height**：轮播图高度，可选（默认400px）<br>
 **mode**：轮播图切换动画模式，有左右滚动（row）上下滚动（col）和淡入淡出（fade）三种动画切换模式，可选（默认row）<br>
-**isShowDots**：控制是否显示圆点（默认为false） <br>
-**isShowArrows**：控制是否显示箭头（默认为false） <br>
+**isShowDots**：控制是否显示圆点（默认为true） <br>
+**isShowArrows**：控制是否显示箭头（默认为true） <br>
 **isPic**：控制slider类型,除了图片还支持轮播文字形式（默认为true） <br>
 
 ## 实例
@@ -51,8 +51,8 @@ sliders: {
         width:"1200px",//图片宽度，可选（默认800px）
         height:"600px",//图片高度，可选（默认400px）
         mode: 'col' //轮播图动画方式，可选（默认row） 
-        isShowDots: true //是否显示圆点，可选（默认false）  
-        isShowArrows: true //是否显示箭头，可选（默认false）    
+        isShowDots: true //是否显示圆点，可选（默认true）  
+        isShowArrows: true //是否显示箭头，可选（默认true）    
       } 
       P.S. 插件的样式需要手动添加，可以在组件内引入：import 'vue-zane-swiper/lib/swiper.css' 或者在main.js中全局引入
 ```  
