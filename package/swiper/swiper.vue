@@ -1,7 +1,7 @@
 <template>
   <div class="slider" :style="style">
     <ul class="slider-wrapper">
-      <transition-group :name="mode">
+      <transition-group :name="mode" tag="ul">
         <li v-for="slider in sliders.sliders" :key="slider.index" class="slider-item" v-show="slider.index === nowIndex">
           <span class="slider-text"  v-if="sliders.isTextSlider">{{ slider.text }}</span>
           <a :href="slider.url || ''"  v-else>
@@ -83,6 +83,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
   .slider {
     position: relative;
     overflow: hidden;
