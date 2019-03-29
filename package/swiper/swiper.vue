@@ -77,7 +77,9 @@ export default {
     }
   },
   mounted () {
-    this._runInv()
+    if(typeof window !== 'undefined'){
+      this._runInv()
+    }
   }
 }
 </script>
