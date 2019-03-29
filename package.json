@@ -1,7 +1,7 @@
 {
   "name": "vue-zane-swiper",
   "description": "vue轮播图组件",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "private": false,
   "main": "lib/swiper.umd.min.js",
   "license": "MIT",
