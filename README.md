@@ -25,6 +25,8 @@ npm run lib
 **isShowArrows**：控制是否显示箭头（默认为false） <br>
 **isTextSlider**：控制slider类型,除了图片还支持轮播文字形式（默认为false） <br>
 
+## demo
+![](https://github.com/qinglong-kooboo/vue-zane-swiper/blob/master/public/img/example.gif)
 ## 实例
 首先在项目的入口文件（main.js）中引入
 ``` 
