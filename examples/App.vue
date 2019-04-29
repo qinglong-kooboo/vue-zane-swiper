@@ -44,7 +44,7 @@ export default {
         interval: 3500,
         width: "595px",
         height: "210px",
-        mode: 'col'
+        mode: 'row'
       }
     }
   }
