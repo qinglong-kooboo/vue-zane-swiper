@@ -1,6 +1,6 @@
 # vue-zane-swiper
 
-> vue轮播图组件
+> vue轮播图组件 https://github.com/qinglong-kooboo/vue-zane-swiper
 
 ## Build Setup
 
