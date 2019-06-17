@@ -59,11 +59,6 @@ sliders: {
       P.S. 插件的样式需要手动添加，可以在组件内引入：import 'vue-zane-swiper/lib/swiper.css' 或者在main.js中全局引入
 ```  
 
-```
-写在最后: 最近在写自己的博客前端，用到了轮播图，最开始找了几个插件，都被复杂的参数弄晕，也没有比较详细的文档。一气之下自己  
-封装了个来用，刚开始写功能很基础，基本都是按照我的项目需求来的，后面需求变多，需要功能的变多，才发现自己的参数也变的好多。。    
-但是，毕竟是自己封装的，用起来还是比较方便。以后再扩展下其他功能。  
-``` 
 
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
